@@ -1,95 +1,36 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div className="container">
+      <div className="splitSection">
+        <div className="mainTitleContent">
+          <h1>Unlocking Opportunities, Shaping Futures.</h1>
+          <p>At Cantor College, we empower students with knowledge, skills, and experiences to thrive in a rapidly changing world.</p>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <Image className="image" src="/images/cantor-atrium-3.jpg" alt="Cantor Atrium" width={720} height={480} loading="eager"/>
+      </div>
+      <h1 className="text">Our courses</h1>
+      <div className="splitSection" id="courses">
+        <div className="courseBox" id="computing">
+          <Link href="/courses/computing"><button className="courseButton">Explore Computing</button></Link>
+        </div>
+        <div className="courseBox" id="design">
+        <Link href="/courses/design"><button className="courseButton">Explore Design</button></Link>
+        </div>
+      </div>
+      <h1 className="text">Other links</h1>
+      <div className="splitSection" id="buttons">
+      <Link href="/info/about" className="otherButton"><button>About Us</button></Link>
+      <Link href="/info/business" className="otherButton"><button>Working with businesses</button></Link>
+      <Link href="/info/facilities" className="otherButton"><button>Facilities</button></Link>
+      </div>
     </div>
   );
+}
+
+export const metadata = {
+  title: "Home | Cantor College",
+  description: "Welcome to Cantor College"
 }

@@ -1,0 +1,42 @@
+.learningResources {
+    margin: 32px;
+    align-items: center;
+    padding: 0px;
+}
+
+.outerList {
+    list-style-type: upper-alpha;
+}
+
+.outerList ol {
+    list-style-type: lower-roman;
+}
+
+.outerList ol li {
+    margin: 1em;
+}
+
+h2 {
+    margin-top: 2em;
+}
+
+@media (max-width: 768px) {
+    .outerList {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .outerList li {
+        margin: 0em;
+    }
+
+    .outerList ol {
+        list-style-type:circle;
+        padding: 0;
+    }
+
+    .outerList ol li {
+        margin: 1em 0em;
+    }
+    
+}
